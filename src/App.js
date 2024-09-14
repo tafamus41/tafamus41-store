@@ -1,9 +1,12 @@
-import Login from "./pages/Login";
+import AuthProvider from "./context/AuthProvider";
 import AppRouter from "./router/AppRouter";
+
 function App() {
   return (
 
-    <AppRouter />
+    <AuthProvider>
+      <AppRouter />
+    </AuthProvider>
     
   );
 }
