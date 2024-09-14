@@ -19,7 +19,11 @@ const Login = () => {
         <form className="flex flex-col text-left p-3 gap-5">
           <div className="flex flex-col gap-2" >
             <label className="font-montserrat text-label text-labelColor hover:after:content-['admin@aa.com'] hover:after:text-black hover:after:pl-3 hover:after:underline hover:cursor-pointer" htmlFor="email">Email</label>
-            <input type="email" className="login-input"/>
+            <input type="email" className="login-input" id="email" placeholder="Enter your email" required />
+          </div>
+          <div className="flex flex-col gap-2" >
+            <label className="font-montserrat text-label text-labelColor hover:after:content-['admin'] hover:after:text-black hover:after:pl-3 hover:after:underline hover:cursor-pointer" htmlFor="password">Email</label>
+            <input type="password" className="login-input" id="password" placeholder="Enter your password" required />
           </div>
         </form>
       </div>
