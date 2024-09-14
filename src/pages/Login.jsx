@@ -17,15 +17,44 @@ const Login = () => {
           </p>
         </div>
         <form className="flex flex-col text-left p-3 gap-5">
-          <div className="flex flex-col gap-2" >
-            <label className="font-montserrat text-label text-labelColor hover:after:content-['admin@aa.com'] hover:after:text-black hover:after:pl-3 hover:after:underline hover:cursor-pointer" htmlFor="email">Email</label>
-            <input type="email" className="login-input" id="email" placeholder="Enter your email" required />
+          <div className="flex flex-col gap-2">
+            <label
+              className="font-montserrat text-label text-labelColor hover:after:content-['admin@aa.com'] hover:after:text-black hover:after:pl-3 hover:after:underline hover:cursor-pointer"
+              htmlFor="email"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              className="login-input"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
           </div>
-          <div className="flex flex-col gap-2" >
-            <label className="font-montserrat text-label text-labelColor hover:after:content-['admin'] hover:after:text-black hover:after:pl-3 hover:after:underline hover:cursor-pointer" htmlFor="password">Email</label>
-            <input type="password" className="login-input" id="password" placeholder="Enter your password" required />
+          <div className="flex flex-col gap-2">
+            <label
+              className="font-montserrat text-label text-labelColor hover:after:content-['admin'] hover:after:text-black hover:after:pl-3 hover:after:underline hover:cursor-pointer"
+              htmlFor="password"
+            >
+              Email
+            </label>
+            <input
+              type="password"
+              className="login-input"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
           </div>
         </form>
+        <button className="bg-main h-[44px] font-montserrat text-label text-white uppercase hover:opacity-90 rounded-[4px]">
+          Sign In
+        </button>
+        <div className="flex justify-center items-center flex-wrap">
+          <span className="text-label font-montserrat font-[400] text-labelColor">Forgot your password</span>
+          <span className="font-montserrat font-[500] text-main ml-1 underline text-[14px]">Reset password</span>
+        </div>
       </div>
     </div>
   );
