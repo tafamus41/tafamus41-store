@@ -1,16 +1,16 @@
 import React, {useState} from "react";
-import { AuthContext } from "../context/AuthProvider";
+// import { AuthContext } from "../context/AuthProvider";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
-  const { login } = useContext(AuthContext);
+  // const { login } = useContext(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email.toLocaleLowerCase() === "admin@aa.com" && pass === "admin") {
-      // console.log({ email, pass });
-      login({ email, pass });
+      console.log({ email, pass });
+      // login({ email, pass });
     } else {
       alert("Kullanıcı bilgileri yanlış");
     }
