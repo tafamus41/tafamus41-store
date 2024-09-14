@@ -30,7 +30,7 @@ const Navbar = () => {
             className="flex items-center"
           >
             <img src={logo} alt="clarusway" width={50} height={50} />
-            <span>Clarusway</span>
+            <span>Tafamus41</span>
           </a>
           {/* //* icon md ekranlardan sonra gizlensin diyoruz */}
           <div className="md:hidden">
