@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import logo from "../assets/logo.png";
 import { closeNavbar, logoutIcon, openNavbar } from "../helper/icons";
 import { NavLink, useLocation } from "react-router-dom";
+import { AuthContext } from "../context/AuthProvider";
 const navigation = [
   {
     title: "Home",
@@ -19,7 +20,8 @@ const navigation = [
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const location = useLocation();
-  console.log(location.pathname);
+  // useContext(AuthContext)
+  // console.log(location.pathname);
   return (
     <nav className="bg-navbarColor md:text-sm ">
       <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8 ">
