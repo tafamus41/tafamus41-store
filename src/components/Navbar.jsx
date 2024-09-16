@@ -19,7 +19,7 @@ const navigation = [
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const location = useLocation();
-  // console.log(location.pathname);
+  console.log(location.pathname);
   return (
     <nav className="bg-navbarColor md:text-sm ">
       <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8 ">
