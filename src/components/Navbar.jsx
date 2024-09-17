@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext, useState } from "react";
 import logo from "../assets/logo.png";
 import { closeNavbar, logoutIcon, openNavbar } from "../helper/icons";
 import { NavLink, useLocation } from "react-router-dom";
@@ -20,8 +20,8 @@ const navigation = [
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const location = useLocation();
-  // useContext(AuthContext)
-  // console.log(location.pathname);
+  const { logout } = useContext(AuthContext);
+  // console.log(location);
   return (
     <nav className="bg-navbarColor md:text-sm ">
       <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8 ">
@@ -32,8 +32,11 @@ const Navbar = () => {
             className="flex items-center"
           >
             <img src={logo} alt="clarusway" width={50} height={50} />
-            <span>Tafamus41</span>
+            <span className="text-gray-700 hover:text-gray-900 font-medium">
+              Clarusway
+            </span>
           </a>
+          {/* //* icon md ekranlardan sonra gizlensin diyoruz */}
           <div className="md:hidden">
             <button
               onClick={() => setShow(!show)}
@@ -53,6 +56,7 @@ const Navbar = () => {
               <li
                 className="text-gray-700 font-medium flex justify-center "
                 key={item.title}
+                onClick={() => setShow(false)}
               >
                 <NavLink
                   className={`block hover:bg-main rounded-full py-2 px-4 hover:text-white ${
@@ -67,8 +71,11 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="flex-1 items-center justify-end gap-x-6 mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
-            <NavLink className="flex items-center justify-center gap-x-1 py-2 px-4 font-medium text-gray-700 hover:bg-main hover:text-white rounded-full md:inline-flex">
+          <div className="flex-1 items-center justify-end gap-x-6 mt-6 space-y-6 md:flex md:space-y-0 md:mt-0 ">
+            <NavLink
+              onClick={logout}
+              className="flex items-center justify-center gap-x-1 py-2 px-4 font-medium text-gray-700 hover:bg-main hover:text-white rounded-full md:inline-flex"
+            >
               Logout {logoutIcon}
             </NavLink>
           </div>
