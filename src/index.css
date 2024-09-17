@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+html {
+    scroll-behavior: smooth;
+  }
 @layer components{
 .loginDiv{
     background: linear-gradient(71deg, #feaf00 19.35%, #f8d442 90.12%);
