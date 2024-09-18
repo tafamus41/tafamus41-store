@@ -13,7 +13,7 @@ const Testimonial = () => {
           </h3>
           <ul>
             {testimonials.map((item, idx) =>
-              currentTestimonial == idx ? (
+              currentTestimonial === idx ? (
                 <li key={idx}>
                   <figure>
                     <blockquote>
